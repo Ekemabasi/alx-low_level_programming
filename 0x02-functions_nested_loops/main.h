@@ -1,31 +1,31 @@
-/**
- *File:main.h
- *Author:Pericles Adjovi
- *Desc:header file containing functions declaration
- */
+#ifndef MAIN_H                                                                                                                                         
 
-void print_alphabet(void);
+#define MAIN_H                                                                                                                                         
 
-void jack_bauer(void);
+int _putchar(char c);                                                                                                                                  
 
-void print_alphabet_x10(void);
+void print_alphabet(void);                                                                                                                             
 
-void times_table();
+void print_alphabet_x10(void);                                                                                                                         
 
-void print_to_98(int);
+int _islower(int c);                                                                                                                                   
 
-void print_times_table(int);
+int _isalpha(int c);                                                                                                                                   
 
-int _putchar(char);
+int print_sign(int n);                                                                                                                                 
 
-int _islower(int c);
+int _abs(int);                                                                                                                                         
 
-int _isalpha(int c);
+int print_last_digit(int);                                                                                                                             
 
-int print_sign(int n);
+void jack_bauer(void);                                                                                                                                 
 
-int _abs(int);
+void times_table(void);                                                                                                                                
 
-int add(int n, int m);
+int add(int, int);                                                                                                                                     
 
-int print_last_digit(int n);
+void print_to_98(int n);                                                                                                                               
+
+                                                                                                                                                       
+
+#endif 
