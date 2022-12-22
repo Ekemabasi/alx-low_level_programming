@@ -1,33 +1,30 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- *cap_string - function that capitalize first character of a word
- *@str: string to capitalize
- *Return:returns the capitalized string
+ * cap_string - capitalize first letter of each word
+ * @s: string to manipulate
+ * Return: string
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int index = 0;
+	int i = 0;
 
-	while (str[++index])
+	/* check first index for capital */
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	i++;
+	while (s[i] != '\0') /* iterate through string */
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		/* if lowercase and prior char is separator, capitalize*/
+		if ((s[i] >= 'a' && s[i] <= 'z')
+				&& (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+					s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+					s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+					s[i - 1] == '}' || s[i - 1] == ' ' || s[i - 1] == '\t'
+					|| s[i - 1] == '\n'))
+			s[i] = s[i] - 'a' + 'A';
+		i++;
 	}
-	return (str);
+	return (s);
 }
