@@ -1,21 +1,22 @@
 #include "main.h"
 /**
- * main - check the code
- * Return: Always 0.
+ * print_number - prints an integer
+ * @n:.input integer parameter
+ *
+ *
  */
-
-int main(void)
+void print_number(int n)
 {
-	print_number(98);
-	_putchar('\n');
-	print_number(402);
-	_putchar('\n');
-	print_number(1024);
-	_putchar('\n');
-	print_number(0);
-	_putchar('\n');
-	print_number(-98);
-	_putchar('\n');
+	unsigned int i = n;
 
-return (0);
+	if (n < 0)
+	{
+		_putchar(45);
+		i = -i;
+	}
+	if (i / 10)
+	{
+		print_number(i / 10);
+	}
+	_putchar(i % 10 + '0');
 }
