@@ -1,0 +1,3 @@
+This Programme seeks to explaine the following...
+What structures are, when, why and how to use them
+How to use typedef
